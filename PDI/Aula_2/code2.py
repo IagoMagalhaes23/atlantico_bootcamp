@@ -1,5 +1,5 @@
 # Import the color module
-from skimage import color
+from skimage.color import rgb2gray
 
 # Import the filters module and sobel function
 from skimage.filters import sobel
@@ -9,7 +9,7 @@ from PDI.src.pdi_utils import load_soaps_image,show_image
 soaps_image = load_soaps_image()
 
 # Make the image grayscale
-soaps_image_gray = color.rgb2gray(soaps_image)
+soaps_image_gray = rgb2gray(soaps_image)
 
 # Apply edge detection filter
 edge_sobel = sobel(soaps_image_gray)
